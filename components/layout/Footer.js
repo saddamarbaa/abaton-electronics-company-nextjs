@@ -10,6 +10,7 @@ import InstagramIcon from "@material-ui/icons/Instagram";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import ExpandLessIcon from "@material-ui/icons/ExpandLess";
 import { useState } from "react";
+import Image from "next/image";
 
 const Footer = () => {
 	const [visible, setVisible] = useState(false);
@@ -35,8 +36,18 @@ const Footer = () => {
 	return (
 		<div className={classes.footer}>
 			<div className={classes["footer-head"]}>
-				<div className={classes.logo}>
-					<img src='/images/logo.png' alt='' />
+				<div
+					className={classes.logo}
+					style={{
+						position: "relative",
+						cursor: "pointer",
+					}}>
+					<Image
+						src='/images/logo.png'
+						alt='logo Image'
+						layout='fill'
+						objectFit='cover'
+					/>
 				</div>
 
 				<nav className={classes.nav}>

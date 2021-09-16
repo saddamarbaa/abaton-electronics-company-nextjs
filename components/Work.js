@@ -30,8 +30,8 @@ const Work = () => {
 						<h2>Who we are</h2>
 						<p>
 							We are Abaton Electronics, a company specializing in
-							automation's, robotics, creating electrical constructions
-							and installing security systems.
+							automation`&apos;s, robotics, creating electrical
+							constructions and installing security systems.
 						</p>
 						<p>
 							Our goal is to make people’s life easier by making some
@@ -89,8 +89,8 @@ const Work = () => {
 								<p>
 									After the AGEO19 is set up you need to set just a
 									number which will indicate the number of people
-									allowed to be inside the building-place and that's
-									all.
+									allowed to be inside the building-place and
+									that`&apos;s all.
 								</p>
 							</div>
 						</div>

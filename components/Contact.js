@@ -50,12 +50,13 @@ const Contact = () => {
 				<div className={classes["content-wrapper"]}>
 					<h1>Get In Touch</h1>
 					<p>
-						Whether you're interested in pricing, a 30 day trial, or a
-						demo of the dashboard, we'd be delighted to open a dialogue.
+						Whether you&apos;re interested in pricing, a 30 day trial, or
+						a demo of the dashboard, we&apos;d be delighted to open a
+						dialogue.
 					</p>
 					<p>
-						Complete the form below and we'll be in touch as soon as we
-						can.
+						Complete the form below and we&apos;ll be in touch as soon as
+						we can.
 					</p>
 
 					<div className={classes["form-wrapper"]}>

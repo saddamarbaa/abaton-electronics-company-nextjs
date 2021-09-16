@@ -1,11 +1,8 @@
 /** @format */
 
 import Head from "next/head";
-import React, { Fragment, Suspense } from "react";
+import React, { Fragment } from "react";
 
-import LoadingSpinner from "../components/UI/LoadingSpinner";
-// const Layout = React.lazy(() => import("../components/layout/Layout"));
-import Layout from "../components/layout/Layout";
 export default function Home() {
 	return (
 		<Fragment>
@@ -21,16 +18,6 @@ export default function Home() {
 				/>
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
-			<Layout></Layout>
-
-			{/* <Suspense
-				fallback={
-					<div className='centered'>
-						<LoadingSpinner />
-					</div>
-				}>
-				<Layout></Layout>
-			</Suspense> */}
 		</Fragment>
 	);
 }

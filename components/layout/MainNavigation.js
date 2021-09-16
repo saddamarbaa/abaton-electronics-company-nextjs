@@ -5,6 +5,8 @@ import MenuIcon from "@material-ui/icons/Menu";
 import { IconButton } from "@material-ui/core";
 import CloseIcon from "@material-ui/icons/Close";
 import classes from "./MainNavigation.module.css";
+import Link from "next/link";
+import Image from "next/image";
 
 const MainNavigation = () => {
 	const [burgerMenuStatus, SetBurgerMenuStatus] = useState(false);
@@ -12,10 +14,23 @@ const MainNavigation = () => {
 	return (
 		<>
 			<header className={classes.header}>
-				<div className={classes.logo}>
-					<a href='/'>
-						<img src='/images/mainlogo.png' alt='Logo' />
-					</a>
+				<div
+					className={classes.logo}
+					style={{
+						position: "relative",
+						cursor: "pointer",
+					}}>
+					<Link href='/'>
+						<a>
+							<Image
+								className='logo-img'
+								src='/images/mainlogo.png'
+								alt='LOGO'
+								layout='fill'
+								objectFit='contain'
+							/>
+						</a>
+					</Link>
 				</div>
 				<nav className={`${classes.nav} ${classes.showNav}`}>
 					<ul>

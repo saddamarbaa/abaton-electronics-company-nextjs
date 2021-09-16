@@ -34,7 +34,20 @@
 }
 
 .footer .logo {
-	margin-right: 2rem;
+	width: 284px;
+	max-height: 20rem;
+	height: 49px;
+}
+
+.footer .logo img {
+	object-fit: contain;
+	display: block;
+}
+
+@media (max-width: 368px) {
+	.footer .logo {
+		display: none;
+	}
 }
 
 .footer .nav a {

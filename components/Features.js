@@ -3,8 +3,8 @@
 import React, { memo } from "react";
 import classes from "./Features.module.css";
 import Fade from "react-reveal/Fade";
-import { LazyLoadImage } from "react-lazy-load-image-component";
-import "react-lazy-load-image-component/src/effects/blur.css";
+import Image from "next/image";
+import CheckIcon from "@material-ui/icons/Check";
 
 const Features = () => {
 	return (
@@ -19,34 +19,53 @@ const Features = () => {
 						</p>
 
 						<p>
-							<img src='/images/Icon.svg' alt='features Image' />
-							Use AGEO 19 as a counter in the doors of your store which
-							will indicate the number of people who can enter. A big
-							STOP indication will stop people from entering the building
-							when the max number of people is already inside.
+							<CheckIcon
+								style={{
+									color: "#72A1D5",
+									marginRight: "10px",
+									fontSize: "2rem",
+								}}
+							/>
+							<span>
+								Use AGEO 19 as a counter in the doors of your store
+								which will indicate the number of people who can enter.
+								A big STOP indication will stop people from entering the
+								building when the max number of people is already
+								inside.
+							</span>
 						</p>
 
 						<p>
-							<img src='/images/Icon.svg' alt='features Image' />
-							AGEO 19 to inform ONLY YOU when there is no more available
-							space inside the building. The sensor is going to handle
-							the traffic and you are going to be informed only when
-							there is no space for more people. This can be done with
-							custom ways we can build for you.
+							<CheckIcon
+								style={{
+									color: "#72A1D5",
+									marginRight: "10px",
+									fontSize: "2rem",
+								}}
+							/>
+							<span>
+								AGEO 19 to inform ONLY YOU when there is no more
+								available space inside the building. The sensor is going
+								to handle the traffic and you are going to be informed
+								only when there is no space for more people. This can be
+								done with custom ways we can build for you.
+							</span>
 						</p>
 					</div>
-					<div className={classes["top-img"]}>
-						<LazyLoadImage
-							effect='blur'
-							placeholderSrc='https://image.tmdb.org/t/p/original/4EYPN5mVIhKLfxGruy7Dy41dTVn.jpg'
-							className='product__image'
+
+					<div
+						className={classes["top-img"]}
+						style={{
+							position: "relative",
+						}}>
+						<Image
 							src='/images/restaurant.png'
-							alt='demo image'
-							// height={190}
-							// weight={190}
-							objectFit='contain'
+							alt='features Image'
+							layout='fill'
+							objectFit='cover'
 						/>
-						{/* <img src='/images/restaurant.png' alt='features Image' /> */}
+
+						<div className={classes["drop-back-shadow-second"]}></div>
 					</div>
 				</Fade>
 			</div>
@@ -56,7 +75,13 @@ const Features = () => {
 					<h2>Start now in just three steps</h2>
 					<div className={classes["bottom-content-wrap"]}>
 						<div className={classes.image}>
-							<img src='/images/feet.png' alt='features Image' />
+							<Image
+								src='/images/feet.png'
+								alt='features Image'
+								width={375}
+								height={480}
+								layout='responsive'
+							/>
 						</div>
 						<div className={classes["bottom-content"]}>
 							<div className={classes["bottom-content-text"]}>
