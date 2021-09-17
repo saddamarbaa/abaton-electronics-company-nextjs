@@ -2,6 +2,12 @@
 
 import Head from "next/head";
 import React, { Fragment } from "react";
+import About from "../components/About";
+import Contact from "../components/Contact";
+import Features from "../components/Features";
+import Footer from "../components/layout/Footer";
+import MainNavigation from "../components/layout/MainNavigation";
+import Work from "../components/Work";
 
 export default function Home() {
 	return (
@@ -18,6 +24,15 @@ export default function Home() {
 				/>
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
+
+			<MainNavigation />
+			<main>
+				<About />
+				<Work />
+				<Features />
+				<Contact />
+				<Footer />
+			</main>
 		</Fragment>
 	);
 }

@@ -2,9 +2,9 @@
 
 import Head from "next/head";
 import Router from "next/router";
+import React, { Fragment } from "react";
 
 import "../styles/globals.css";
-import Layout from "../components/layout/layout";
 
 import ProgressBar from "@badrap/bar-of-progress";
 
@@ -31,18 +31,17 @@ Router.events.on("routeChangeError", progress.finish);
 
 function MyApp({ Component, pageProps }) {
 	return (
-		<Layout>
+		<Fragment>
 			<Head>
-				<title>PHOENIX SOFTWARE SOLUTION</title>
+				<title>Abaton Electronics</title>
 				<meta
 					name='description'
-					content='Helping companies & individuals identify key solutions for their target markets. We boost their ability to create products. Our business model saves clients time and money. Don`t reinvent the wheel..
-					'
+					content='Abaton Electronics, a company specializing in automation s, robotics, creating electrical constructions and installing security systems.'
 				/>
 			</Head>
 
 			<Component {...pageProps} />
-		</Layout>
+		</Fragment>
 	);
 }
 
