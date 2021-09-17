@@ -1,6 +1,6 @@
 /** @format */
 
-import React from "react";
+import React, { Fragment } from "react";
 import MainNavigation from "./MainNavigation";
 import classes from "./Layout.module.css";
 import Footer from "./Footer";
@@ -11,7 +11,7 @@ import Contact from "../Contact";
 
 const Layout = (props) => {
 	return (
-		<>
+		<Fragment>
 			<MainNavigation />
 			<main className={classes.main}>
 				<About />
@@ -20,7 +20,7 @@ const Layout = (props) => {
 				<Contact />
 				<Footer />
 			</main>
-		</>
+		</Fragment>
 	);
 };
 
