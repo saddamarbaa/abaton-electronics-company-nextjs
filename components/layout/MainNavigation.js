@@ -4,9 +4,10 @@ import { memo, React, useState } from "react";
 import MenuIcon from "@material-ui/icons/Menu";
 import { IconButton } from "@material-ui/core";
 import CloseIcon from "@material-ui/icons/Close";
-import classes from "./mainNavigation.module.css";
 import Link from "next/link";
 import Image from "next/image";
+
+import classes from "./MainNavigation.module.css";
 
 const MainNavigation = () => {
 	const [burgerMenuStatus, SetBurgerMenuStatus] = useState(false);
