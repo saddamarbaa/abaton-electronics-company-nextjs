@@ -2,7 +2,7 @@
 
 import { Fragment } from "react";
 
-import Footer from "./footer";
+import Footer from "./Footer";
 import MainNavigation from "./mainNavigation";
 
 function Layout(props) {
