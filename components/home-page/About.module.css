@@ -16,7 +16,7 @@
 .about .image {
 	position: relative;
 	min-height: 85vh;
-	height: 80vh;
+	height: 90vh;
 	background: transparent linear-gradient(91deg, #e8e8e8 0%, #e8e8e800 100%) 0%
 		0% no-repeat padding-box;
 	display: flex;
@@ -51,7 +51,7 @@
 .absolute-content .svgImage {
 	max-width: 565px;
 	height: 36px;
-	padding-left: 2rem;
+	padding-left: 19px;
 	overflow: hidden;
 }
 
@@ -73,7 +73,6 @@
 
 @media (max-width: 768px) {
 	.absolute-content .svgImage {
-		display: none;
 		padding-left: 0rem;
 	}
 
@@ -168,7 +167,7 @@
 	top: 0;
 	left: 0;
 	bottom: 0%;
-	width: 20%;
-	background: transparent linear-gradient(91deg, #e8e8e8 0%, #e8e8e800 100%) 0%
+	width: 40%;
+	background: transparent linear-gradient(91deg, #8a8686 0%, #c7252500 100%) 0%
 		0%;
 }

@@ -1,8 +1,10 @@
 /** @format */
 
 import React, { memo, useRef } from "react";
-import classes from "./Contact.module.css";
 import Fade from "react-reveal/Fade";
+
+
+import classes from "./Contact.module.css";
 
 const Contact = () => {
 	const firstNameReference = useRef();

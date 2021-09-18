@@ -1,12 +1,6 @@
 /** @format */
 
 .header {
-	width: 100%;
-	height: 5.625rem;
-	display: flex;
-	padding: 0 5%;
-	justify-content: space-between;
-	align-items: center;
 	background-color: #f8fbfe;
 	box-shadow: 10px 15px 15px #00000029;
 	width: 100%;
@@ -14,6 +8,21 @@
 	top: 0;
 	z-index: 100;
 	position: fixed;
+}
+
+.header .container {
+	background-color: #f8fbfe;
+	box-shadow: 10px 15px 15px #00000029;
+	display: flex;
+	gap: 2rem;
+	padding: 0 5%;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	max-width: var(--max-width);
+	overflow: hidden;
+	margin: 0 auto;
+	height: 5.625rem;
 }
 
 .logo {
@@ -74,10 +83,11 @@
 }
 
 nav a.worklink {
-	padding: 0 0.7rem;
+	padding: 0 0.8rem;
 }
+
 .nav .contact {
-	margin-left: 3rem;
+	margin-left: 2rem;
 }
 
 .nav .contact a {
@@ -88,24 +98,23 @@ nav a.worklink {
 	border: 1px solid #707070;
 	border-radius: 22px;
 	padding: 0.5rem 0;
-	-webkit-border-radius: 22px;
-	-moz-border-radius: 22px;
-	-ms-border-radius: 22px;
-	-o-border-radius: 22px;
 	-webkit-transition: transform 0.3s;
 	-moz-transition: transform 0.3s;
 	-ms-transition: transform 0.3s;
 	-o-transition: transform 0.3s;
+	-webkit-border-radius: 22px;
+	-moz-border-radius: 22px;
+	-ms-border-radius: 22px;
+	-o-border-radius: 22px;
 }
 
 .nav a:hover,
-.nav a:active,
 .nav a.active {
 	background: #e8e8e8;
 }
 
 @media (max-width: 768px) {
-	.contact a {
+	.nav .contact {
 		display: none;
 	}
 

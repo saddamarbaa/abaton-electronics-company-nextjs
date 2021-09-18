@@ -2,9 +2,9 @@
 
 import Head from "next/head";
 import Router from "next/router";
-import React, { Fragment } from "react";
 
 import "../styles/globals.css";
+import Layout from "../components/layout/layout";
 
 import ProgressBar from "@badrap/bar-of-progress";
 
@@ -15,7 +15,7 @@ const progress = new ProgressBar({
 
 	// Color of the progress bar.
 	// Also used for the glow around the bar.
-	color: "#00d0b0",
+	color: "#006aff",
 
 	// Class name used for the progress bar element.
 	className: "bar-of-progress",
@@ -31,7 +31,7 @@ Router.events.on("routeChangeError", progress.finish);
 
 function MyApp({ Component, pageProps }) {
 	return (
-		<Fragment>
+		<Layout>
 			<Head>
 				<title>Abaton Electronics</title>
 				<meta
@@ -41,7 +41,7 @@ function MyApp({ Component, pageProps }) {
 			</Head>
 
 			<Component {...pageProps} />
-		</Fragment>
+		</Layout>
 	);
 }
 

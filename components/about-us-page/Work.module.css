@@ -1,10 +1,17 @@
 /** @format */
 
+.work {
+	min-height: 100vh;
+	background-color: #f8fbfe;
+}
+
 .work p {
 	font-size: 1.1rem;
 	color: #4b4b4d;
 	line-height: 1.5;
 	margin-bottom: 1rem;
+	background-color: #f8fbfe;
+	box-shadow: 10px #00000029;
 }
 
 @media (max-width: 568px) {
@@ -17,16 +24,23 @@
 	background-color: #f8fbfe;
 	box-shadow: 10px #00000029;
 	padding: 5rem 5%;
+	padding-top: 10rem;
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
 	min-height: 42.813rem;
 	flex-wrap: wrap;
+
+	width: 100%;
+	max-width: var(--max-width);
+	overflow: hidden;
+	margin: 0 auto;
 }
 
 @media (min-width: 768px) {
 	.work .head {
 		padding: 8rem 5%;
+		padding-top: 13rem;
 	}
 }
 

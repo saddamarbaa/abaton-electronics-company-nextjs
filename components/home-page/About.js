@@ -27,14 +27,17 @@ const About = () => {
 						People Count and <br></br>occupancy solutions
 					</h1>
 
-					<Image
-						alt='svg logo'
-						src='/images/Group 2.svg'
-						objectFit='contain'
-						width={100}
-						height={100}
-						className={classes.svgImage}
-					/>
+					<div className={classes["svgImage"]}>
+						<Image
+							alt='svg logo'
+							src='/images/Group 2.svg'
+							objectFit='contain'
+							width={465}
+							height={36}
+							style={{ display: "block" }}
+							className={classes.svgImage}
+						/>
+					</div>
 				</div>
 			</div>
 

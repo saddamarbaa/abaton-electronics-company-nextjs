@@ -1,0 +1,29 @@
+/** @format */
+
+.scrollToTopButton {
+	position: fixed;
+	right: 1rem;
+	bottom: 1rem;
+	min-width: 3rem;
+	min-height: 3rem;
+	background: #87a6c3;
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-ms-border-radius: 50%;
+	-o-border-radius: 50%;
+}
+
+.scrollToTopButton:hover {
+	background: #043340;
+	border: 1px solid #043340;
+}
+
+.scrollToTopButton .icon {
+	font-size: 2.3rem;
+	cursor: pointer;
+}

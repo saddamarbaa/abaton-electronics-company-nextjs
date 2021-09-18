@@ -1,7 +1,6 @@
 /** @format */
 
 import React, { memo } from "react";
-import classes from "./Footer.module.css";
 import Fade from "react-reveal/Fade";
 import TwitterIcon from "@material-ui/icons/Twitter";
 import FacebookIcon from "@material-ui/icons/Facebook";
@@ -11,30 +10,15 @@ import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import ExpandLessIcon from "@material-ui/icons/ExpandLess";
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
+
+import classes from "./Footer.module.css";
+import ScrollToTopComponent from "./scrollToTop";
 
 const Footer = () => {
-	const [visible, setVisible] = useState(false);
-
-	const toggleVisible = () => {
-		const scrolled = document.documentElement.scrollTop;
-		if (scrolled > 400) {
-			setVisible(true);
-		} else if (scrolled <= 400) {
-			setVisible(false);
-		}
-	};
-
-	const scrollToTop = () => {
-		// window.scrollTo({
-		// 	top: 0,
-		// 	behavior: "smooth",
-		// });
-	};
-
-	// window.addEventListener("scroll", toggleVisible);
-
 	return (
 		<div className={classes.footer}>
+			<ScrollToTopComponent />
 			<div className={classes["footer-head"]}>
 				<div
 					className={classes.logo}
@@ -42,19 +26,34 @@ const Footer = () => {
 						position: "relative",
 						cursor: "pointer",
 					}}>
-					<Image
-						src='/images/logo.png'
-						alt='logo Image'
-						layout='fill'
-						objectFit='cover'
-					/>
+					<Link href='/'>
+						<a>
+							<Image
+								src='/images/logo.png'
+								alt='logo Image'
+								layout='fill'
+								objectFit='cover'
+							/>
+						</a>
+					</Link>
 				</div>
 
 				<nav className={classes.nav}>
-					<a href='#about'> About us</a>
-					<a href='#feature'> Feature</a>
-					<a href='#work'>How it works</a>
-					<a href='#contact'>Contact</a>
+					<Link href='/'>
+						<a>Home</a>
+					</Link>
+
+					<Link href='/about-us'>
+						<a>About us</a>
+					</Link>
+
+					<Link href='/product'>
+						<a>Products</a>
+					</Link>
+
+					<Link href='/contact'>
+						<a> Contact</a>
+					</Link>
 				</nav>
 
 				<div className={classes.contacts}>
@@ -90,12 +89,6 @@ const Footer = () => {
 				<Fade right big>
 					<p>&copy; 2011 Abaton Electronics | Power By: PHONEIX</p>
 				</Fade>
-			</div>
-
-			<div
-				className={classes.scrollToTop}
-				style={{ display: visible ? "flex" : "none" }}>
-				<ExpandLessIcon onClick={scrollToTop} className={classes.icon} />
 			</div>
 		</div>
 	);

@@ -1,9 +1,10 @@
 /** @format */
 
 import React, { memo } from "react";
-import classes from "./Features.module.css";
 import Fade from "react-reveal/Fade";
 import Image from "next/image";
+
+import classes from "./Features.module.css";
 import CheckIcon from "@material-ui/icons/Check";
 
 const Features = () => {

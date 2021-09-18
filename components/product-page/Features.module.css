@@ -13,6 +13,11 @@
 	padding: 5rem 5% !important;
 	padding-right: 0;
 	gap: 3.125rem;
+
+	width: 100%;
+	max-width: var(--max-width);
+	overflow: hidden;
+	margin: 0 auto;
 }
 
 .feature .feature-top-wrap .top-content {
@@ -80,6 +85,10 @@
 
 .feature .feature-bottom-wrap {
 	padding: 5rem 5%;
+	width: 100%;
+	max-width: var(--max-width);
+	overflow: hidden;
+	margin: 0 auto;
 }
 
 @media (min-width: 768px) {

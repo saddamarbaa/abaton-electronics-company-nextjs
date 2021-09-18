@@ -4,12 +4,19 @@
 	background: #ffffff;
 	min-height: 50.75rem;
 	padding: 5rem 5%;
+	padding-top: 10rem;
 	color: #4b4b4d;
+
+	width: 100%;
+	max-width: var(--max-width);
+	overflow: hidden;
+	margin: 0 auto;
 }
 
 @media (min-width: 768px) {
 	.contact {
 		padding: 8rem 5%;
+		padding-top: 13rem;
 	}
 }
 
