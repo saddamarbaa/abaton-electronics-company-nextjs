@@ -148,7 +148,7 @@ nav a.worklink {
 }
 
 .side-nav {
-	z-index: 200;
+	z-index: 203;
 	position: fixed;
 	top: 0;
 	right: 0;
@@ -180,4 +180,78 @@ nav a.worklink {
 	font-size: 1.1;
 	color: #4b4b4d;
 	cursor: pointer;
+}
+
+/* Hover and Focus style */
+.select select:hover,
+.select select:focus {
+	border: 1px solid var(--blue) !important;
+	box-shadow: 0 0 1px 3px rgba(59, 153, 252, 0.7);
+	outline: none;
+}
+
+li.select {
+	color: red;
+}
+
+/* Set options to normal weight */
+.select option {
+	font-weight: normal;
+	color: var(--dark-Gray) !important;
+}
+
+/* Reset Select */
+.select select {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-ms-appearance: none;
+	appearance: none;
+	outline: 0;
+	box-shadow: none;
+	border: 0 !important;
+	background-image: none;
+	background-color: white;
+	flex: 1;
+	padding: 0 0.5em;
+	cursor: pointer;
+	line-height: 1.3;
+	width: 100%;
+	max-width: 100%;
+	box-sizing: border-box;
+	margin: 0;
+}
+
+.header select {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-ms-appearance: none;
+	appearance: none;
+	outline: 0;
+	box-shadow: none;
+	border: 0 !important;
+	background-image: none;
+	flex: 1;
+	padding: 0 0.5em;
+	cursor: pointer;
+	line-height: 1.3;
+	width: 100%;
+	max-width: 100%;
+	box-sizing: border-box;
+	margin: 0;
+	display: block;
+	font: inherit;
+	cursor: pointer;
+	background: transparent;
+	padding: 0.5rem 1rem;
+	border-radius: 4px;
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+	transition: 3s;
+	display: block;
+	height: 2.5rem;
+	width: 100%;
+	margin: 0 auto;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-ms-border-radius: 4px;
+	-o-border-radius: 4px;
 }

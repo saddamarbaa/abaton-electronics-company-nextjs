@@ -2,6 +2,8 @@
 
 import Head from "next/head";
 import Router from "next/router";
+import { store } from "../app/store";
+import { Provider } from "react-redux";
 
 import "../styles/globals.css";
 import Layout from "../components/layout/layout";
@@ -31,17 +33,19 @@ Router.events.on("routeChangeError", progress.finish);
 
 function MyApp({ Component, pageProps }) {
 	return (
-		<Layout>
-			<Head>
-				<title>Abaton Electronics</title>
-				<meta
-					name='description'
-					content='Abaton Electronics, a company specializing in automation s, robotics, creating electrical constructions and installing security systems.'
-				/>
-			</Head>
+		<Provider store={store}>
+			<Layout>
+				<Head>
+					<title>Abaton Electronics</title>
+					<meta
+						name='description'
+						content='Abaton Electronics, a company specializing in automation s, robotics, creating electrical constructions and installing security systems.'
+					/>
+				</Head>
 
-			<Component {...pageProps} />
-		</Layout>
+				<Component {...pageProps} />
+			</Layout>
+		</Provider>
 	);
 }
 
