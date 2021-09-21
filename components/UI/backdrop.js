@@ -3,14 +3,7 @@ import React from "react";
 import styled from "styled-components";
 
 const BackDrop = (props) => {
-	return (
-		<BackdropWrapper
-			onClick={() => {
-				props?.SetBurgerMenuStatus(false);
-			}}>
-			{props.children}
-		</BackdropWrapper>
-	);
+	return <BackdropWrapper>{props.children}</BackdropWrapper>;
 };
 
 export default BackDrop;

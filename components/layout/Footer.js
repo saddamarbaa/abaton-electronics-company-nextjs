@@ -12,10 +12,20 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
+import { useDispatch, useSelector } from "react-redux";
+import {
+	setShowGreeceLanguageState,
+	setShowEnglishLanguageState,
+	selectLanguage,
+} from "../../features/language/languageSlice";
+
 import classes from "./Footer.module.css";
 import ScrollToTopComponent from "./scrollToTop";
 
 const Footer = () => {
+	const dispatch = useDispatch();
+	const englishLanguage = useSelector(selectLanguage);
+
 	return (
 		<div className={classes.footer}>
 			<ScrollToTopComponent />
@@ -38,43 +48,88 @@ const Footer = () => {
 					</Link>
 				</div>
 
-				<nav className={classes.nav}>
-					<Link href='/'>
-						<a>Home</a>
-					</Link>
+				{englishLanguage && (
+					<nav className={classes.nav}>
+						<Link href='/'>
+							<a>Home</a>
+						</Link>
 
-					<Link href='/about-us'>
-						<a>About us</a>
-					</Link>
+						<Link href='/about-us'>
+							<a>About us</a>
+						</Link>
 
-					<Link href='/product'>
-						<a>Products</a>
-					</Link>
+						<Link href='/product'>
+							<a>Products</a>
+						</Link>
 
-					<Link href='/contact'>
-						<a> Contact</a>
-					</Link>
-				</nav>
+						<Link href='/contact'>
+							<a> Contact</a>
+						</Link>
+					</nav>
+				)}
 
-				<div className={classes.contacts}>
-					<p className={classes["hide-ms"]}>
-						<span>Contact</span>
-					</p>
-					<p>
-						<span>fax: </span> 2410624625
-					</p>
-					<p>
-						<span>mobile: </span> 698325636
-					</p>
-					<p>
-						<span>Email: </span>info@abatonelectronic.gr
-					</p>
-					<p>
-						<span>Address: </span> Cairo 25.41335 Larissa
-					</p>
-				</div>
+				{!englishLanguage && (
+					<nav className={classes.nav}>
+						<Link href='/'>
+							<a>Αρχική</a>
+						</Link>
+
+						<Link href='/about-us'>
+							<a>Για εμάς</a>
+						</Link>
+
+						<Link href='/product'>
+							<a>Προϊόντα</a>
+						</Link>
+
+						<Link href='/contact'>
+							<a> Επικοινωνία</a>
+						</Link>
+					</nav>
+				)}
+
+				{englishLanguage && (
+					<div className={classes.contacts}>
+						<p className={classes["hide-ms"]}>
+							<span>Contact</span>
+						</p>
+						<p>
+							<span>fax: </span> 2410624625
+						</p>
+						<p>
+							<span>mobile: </span> 698325636
+						</p>
+						<p>
+							<span>Email: </span>info@abatonelectronic.gr
+						</p>
+						<p>
+							<span>Address: </span> Cairo 25.41335 Larissa
+						</p>
+					</div>
+				)}
+
+				{!englishLanguage && (
+					<div className={classes.contacts}>
+						<p className={classes["hide-ms"]}>
+							<span>Επικοινωνία</span>
+						</p>
+						<p>
+							<span>ΦΑΞ: </span> 2410624625
+						</p>
+						<p>
+							<span>Κινητό: </span> 698325636
+						</p>
+						<p>
+							<span>Email: </span>info@abatonelectronic.gr
+						</p>
+						<p>
+							<span>Οδός: </span> Cairo 25.41335 Larissa
+						</p>
+					</div>
+				)}
 				<div className={classes["social-media"]}>
 					<p>Social Media</p>
+
 					<FacebookIcon className={classes.icon} />
 					<InstagramIcon className={classes.icon} />
 					<TwitterIcon className={classes.icon} />
@@ -87,7 +142,7 @@ const Footer = () => {
 			<div className={classes["footer-bottom"]}>
 				<div></div>
 				<Fade right big>
-					<p>&copy; 2011 Abaton Electronics | Power By: PHONEIX</p>
+					<p>&copy; 2021 Abaton Electronics | Powered By: PHOENIX</p>
 				</Fade>
 			</div>
 		</div>

@@ -9,7 +9,7 @@ function ContactPage() {
 	return (
 		<Fragment>
 			<Head>
-				<title>Contact us</title>
+				<title>Contact Us</title>
 				<meta
 					name='description'
 					content="Whether you're interested in pricing, a 30 day trial, or a demo of the dashboard, we'd be delighted to open a dialogue.

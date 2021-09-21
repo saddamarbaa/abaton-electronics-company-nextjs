@@ -9,7 +9,7 @@ function AboutUsPage() {
 	return (
 		<Fragment>
 			<Head>
-				<title>products</title>
+				<title>Products</title>
 				<meta
 					name='description'
 					content="Ai Occupancy Monitor

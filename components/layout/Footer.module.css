@@ -5,6 +5,7 @@
 	color: #4b4b4d;
 	background: #e8e8e8;
 	position: relative;
+	box-shadow: inset 0px 3px 6px #8a555529;
 }
 
 .footer .footer-head {
@@ -13,8 +14,7 @@
 	display: flex;
 	justify-content: space-between;
 	background: transparent;
-	background: url("../../img/Component.svg") no-repeat center center/cover;
-	box-shadow: inset 0px 3px 6px #8a555529;
+	/* background: url("../../img/Component.svg") no-repeat center center/cover; */
 	border-bottom: 0.2px solid #d8d8d8;
 	flex-wrap: wrap;
 
@@ -95,7 +95,7 @@
 	padding: 2rem 5%;
 	padding-bottom: 4rem;
 	min-height: 2rem;
-	background: url("../../img/Component.svg") no-repeat center center/cover;
+	/* background: url("../../img/Component.svg") no-repeat center center/cover; */
 	display: flex;
 	align-items: center;
 	justify-content: center;

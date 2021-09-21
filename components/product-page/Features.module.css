@@ -98,6 +98,7 @@
 }
 
 .feature .feature-bottom-wrap h2 {
+	font-size: 3rem;
 	padding-bottom: 1rem;
 }
 
@@ -119,6 +120,10 @@
 @media (max-width: 768px) {
 	.feature .feature-bottom-wrap .bottom-content-wrap .image {
 		min-width: 90%;
+	}
+
+	.feature .feature-bottom-wrap h2 {
+		font-size: 2rem;
 	}
 }
 
@@ -206,9 +211,13 @@
 	position: absolute;
 	z-index: 3;
 	top: -2.938rem;
-	left: 2.813rem;
+	left: 0rem;
 	bottom: 0;
 	width: 75%;
 	background: transparent linear-gradient(91deg, #e8e8e8 0%, #e8e8e800 100%) 0%
 		0%;
+}
+
+#drop-back-shadow-second {
+	left: 2.813rem;
 }

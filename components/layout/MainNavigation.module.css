@@ -12,7 +12,6 @@
 
 .header .container {
 	background-color: #f8fbfe;
-	box-shadow: 10px 15px 15px #00000029;
 	display: flex;
 	gap: 2rem;
 	padding: 0 5%;
@@ -86,30 +85,8 @@ nav a.worklink {
 	padding: 0 0.8rem;
 }
 
-.nav .contact {
-	margin-left: 2rem;
-}
-
-.nav .contact a {
-	width: 193px;
-	min-height: auto;
-	box-shadow: inset 0px 3px 6px #00000029, 8px 8px 10px #00000029;
-	transition: transform 0.3s;
-	border: 1px solid #707070;
-	border-radius: 22px;
-	padding: 0.5rem 0;
-	-webkit-transition: transform 0.3s;
-	-moz-transition: transform 0.3s;
-	-ms-transition: transform 0.3s;
-	-o-transition: transform 0.3s;
-	-webkit-border-radius: 22px;
-	-moz-border-radius: 22px;
-	-ms-border-radius: 22px;
-	-o-border-radius: 22px;
-}
-
 .nav a:hover,
-.nav a.active {
+.nav a#active {
 	background: #e8e8e8;
 }
 
@@ -164,10 +141,10 @@ nav a.worklink {
 	-moz-transition: transform 0.3s;
 	-ms-transition: transform 0.3s;
 	-o-transition: transform 0.3s;
-	-webkit-border-radius: 6px;
-	-moz-border-radius: 6px;
-	-ms-border-radius: 6px;
-	-o-border-radius: 6px;
+	-webkit-border-radius: ;
+	-moz-border-radius: ;
+	-ms-border-radius: ;
+	-o-border-radius: ;
 }
 
 .side-nav li {
@@ -182,18 +159,6 @@ nav a.worklink {
 	cursor: pointer;
 }
 
-/* Hover and Focus style */
-.select select:hover,
-.select select:focus {
-	border: 1px solid var(--blue) !important;
-	box-shadow: 0 0 1px 3px rgba(59, 153, 252, 0.7);
-	outline: none;
-}
-
-li.select {
-	color: red;
-}
-
 /* Set options to normal weight */
 .select option {
 	font-weight: normal;
@@ -201,26 +166,6 @@ li.select {
 }
 
 /* Reset Select */
-.select select {
-	-webkit-appearance: none;
-	-moz-appearance: none;
-	-ms-appearance: none;
-	appearance: none;
-	outline: 0;
-	box-shadow: none;
-	border: 0 !important;
-	background-image: none;
-	background-color: white;
-	flex: 1;
-	padding: 0 0.5em;
-	cursor: pointer;
-	line-height: 1.3;
-	width: 100%;
-	max-width: 100%;
-	box-sizing: border-box;
-	margin: 0;
-}
-
 .header select {
 	-webkit-appearance: none;
 	-moz-appearance: none;
@@ -231,27 +176,31 @@ li.select {
 	border: 0 !important;
 	background-image: none;
 	flex: 1;
-	padding: 0 0.5em;
 	cursor: pointer;
 	line-height: 1.3;
-	width: 100%;
 	max-width: 100%;
 	box-sizing: border-box;
 	margin: 0;
 	display: block;
 	font: inherit;
-	cursor: pointer;
 	background: transparent;
 	padding: 0.5rem 1rem;
 	border-radius: 4px;
 	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
-	transition: 3s;
+	transition: 0.3s;
 	display: block;
-	height: 2.5rem;
+	height: 2.8rem;
+	min-width: 105px;
+	text-align: center;
 	width: 100%;
 	margin: 0 auto;
-	-webkit-border-radius: 4px;
-	-moz-border-radius: 4px;
-	-ms-border-radius: 4px;
-	-o-border-radius: 4px;
+	color: #4b4b4d;
+	-webkit-transition: 0.3s;
+	-moz-transition: 0.3s;
+	-ms-transition: 0.3s;
+	-o-transition: 0.3s;
+}
+
+.header select:hover {
+	border: 0.4px solid rgb(59, 153, 252);
 }

@@ -6,6 +6,7 @@ import { IconButton } from "@material-ui/core";
 import CloseIcon from "@material-ui/icons/Close";
 import Link from "next/link";
 import Image from "next/image";
+import { useRouter } from "next/router";
 
 import { useDispatch, useSelector } from "react-redux";
 import {
@@ -22,6 +23,8 @@ const MainNavigation = () => {
 	const dispatch = useDispatch();
 	const englishLanguage = useSelector(selectLanguage);
 
+	const router = useRouter();
+
 	const showEnglishLanguage = () => {
 		dispatch(setShowEnglishLanguageState());
 	};
@@ -37,6 +40,9 @@ const MainNavigation = () => {
 					<SideBar
 						burgerMenuStatus={burgerMenuStatus}
 						SetBurgerMenuStatus={SetBurgerMenuStatus}
+						showGreeceLanguage={showGreeceLanguage}
+						showEnglishLanguage={showEnglishLanguage}
+						englishLanguage={englishLanguage}
 					/>
 					<div className={classes.container}>
 						<div
@@ -61,7 +67,10 @@ const MainNavigation = () => {
 							<ul>
 								<li>
 									<Link href='/'>
-										<a className={classes.active} id='active'>
+										<a
+											id={
+												router.pathname == "/" ? classes.active : ""
+											}>
 											Home
 										</a>
 									</Link>
@@ -69,31 +78,53 @@ const MainNavigation = () => {
 
 								<li>
 									<Link href='/about-us'>
-										<a className={classes.worklink}> About us</a>
+										<a
+											className={classes.worklink}
+											id={
+												router.pathname == "/about-us"
+													? classes.active
+													: ""
+											}>
+											About us
+										</a>
 									</Link>
 								</li>
 								<li>
 									<Link href='/product'>
-										<a className={classes.worklink}>Products</a>
+										<a
+											className={classes.worklink}
+											id={
+												router.pathname == "/product"
+													? classes.active
+													: ""
+											}>
+											Products
+										</a>
 									</Link>
 								</li>
 
 								<li>
 									<Link href='/contact'>
-										<a className={classes.contact}> Contact</a>
+										<a
+											className={classes.contact}
+											id={
+												router.pathname == "/contact"
+													? classes.active
+													: ""
+											}>
+											Contact
+										</a>
 									</Link>
 								</li>
 
 								<li className='select'>
 									<select required>
 										<option selected disabled value=''>
-											language
-										</option>
-										<option onClick={showEnglishLanguage}>
 											English
 										</option>
+
 										<option onClick={showGreeceLanguage}>
-											Greece
+											Greek
 										</option>
 									</select>
 								</li>
@@ -143,39 +174,63 @@ const MainNavigation = () => {
 							<ul>
 								<li>
 									<Link href='/'>
-										<a className={classes.active} id='active'>
-											Greece
+										<a
+											id={
+												router.pathname == "/" ? classes.active : ""
+											}>
+											Αρχική
 										</a>
 									</Link>
 								</li>
 
 								<li>
 									<Link href='/about-us'>
-										<a className={classes.worklink}> Greece</a>
+										<a
+											className={classes.worklink}
+											id={
+												router.pathname == "/about-us"
+													? classes.active
+													: ""
+											}>
+											Για εμάς
+										</a>
 									</Link>
 								</li>
 								<li>
 									<Link href='/product'>
-										<a className={classes.worklink}>Greece</a>
+										<a
+											className={classes.worklink}
+											id={
+												router.pathname == "/product"
+													? classes.active
+													: ""
+											}>
+											Προϊόντα
+										</a>
 									</Link>
 								</li>
 
 								<li>
 									<Link href='/contact'>
-										<a className={classes.contact}> Greece</a>
+										<a
+											className={classes.worklink}
+											id={
+												router.pathname == "/contact"
+													? classes.active
+													: ""
+											}>
+											Επικοινωνία
+										</a>
 									</Link>
 								</li>
 
 								<li className='select'>
 									<select required>
 										<option selected disabled value=''>
-											Greece
+											Greek
 										</option>
 										<option onClick={showEnglishLanguage}>
 											English
-										</option>
-										<option onClick={showGreeceLanguage}>
-											Greece
 										</option>
 									</select>
 								</li>
