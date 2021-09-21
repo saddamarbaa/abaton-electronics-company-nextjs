@@ -118,7 +118,7 @@ const MainNavigation = () => {
 								</li>
 
 								<li className='select'>
-									<select required>
+									<select required onChange={showGreeceLanguage}>
 										<option selected disabled value=''>
 											English
 										</option>
@@ -225,7 +225,7 @@ const MainNavigation = () => {
 								</li>
 
 								<li className='select'>
-									<select required>
+									<select required onChange={showEnglishLanguage}>
 										<option selected disabled value=''>
 											Greek
 										</option>

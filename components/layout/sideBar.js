@@ -75,8 +75,8 @@ const SideBar = ({ burgerMenuStatus, SetBurgerMenuStatus }) => {
 								</li>
 
 								<li className='select'>
-									<select required>
-										<option selected disabled value=''>
+									<select required onChange={showGreeceLanguage}>
+										<option selected disabled>
 											English
 										</option>
 
@@ -118,8 +118,8 @@ const SideBar = ({ burgerMenuStatus, SetBurgerMenuStatus }) => {
 								</li>
 
 								<li className='select'>
-									<select required>
-										<option selected disabled value=''>
+									<select required onChange={showEnglishLanguage}>
+										<option selected disabled>
 											Greek
 										</option>
 										<option onClick={showEnglishLanguage}>
