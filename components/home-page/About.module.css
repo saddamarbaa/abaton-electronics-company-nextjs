@@ -5,6 +5,9 @@
 	padding-bottom: 5rem;
 	position: relative;
 	padding-top: 5.625rem;
+
+	min-height: 85vh;
+	height: 90vh;
 }
 
 @media (min-width: 768px) {

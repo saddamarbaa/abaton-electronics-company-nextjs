@@ -15,13 +15,6 @@ const About = () => {
 				style={{
 					position: "relative",
 				}}>
-				<Image
-					src='/images/woman-entering-furniture-store-1600x900.png'
-					alt='About Image'
-					layout='fill'
-					objectFit='cover'
-				/>
-
 				<div className={classes["absolute-content"]}>
 					<h1>
 						People Count and <br></br>occupancy solutions
@@ -40,38 +33,6 @@ const About = () => {
 					</div>
 				</div>
 			</div>
-
-			<div className={classes.trustedBy}>
-				<h1>Trusteed by</h1>
-
-				<div className={classes["trusted-company"]}>
-					<div className={classes.icon}>
-						<ArrowBackIosIcon />
-					</div>
-					<div className={classes["trusted-company-inner"]}>
-						<Image
-							src='/images/Bitcoinlogo.svg'
-							alt='biton logo'
-							objectFit='contain'
-							width={158}
-							height={46}
-						/>
-
-						<Image
-							src='/images/googleLogo.png'
-							alt='google logo'
-							objectFit='contain'
-							width={146}
-							height={50}
-						/>
-					</div>
-
-					<div className={classes.icon}>
-						<ArrowForwardIosIcon />
-					</div>
-				</div>
-			</div>
-			<div className={classes["drop-back-shadow"]}></div>
 		</section>
 	);
 };

@@ -1,0 +1,138 @@
+/** @format */
+
+.landing {
+	background: #e8e8e8;
+	padding-bottom: 5rem;
+	position: relative;
+	padding-top: 5.625rem;
+	padding-top: 11rem !important;
+	padding: 5rem 5%;
+	width: 100%;
+	max-width: var(--max-width);
+	overflow: hidden;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	color: #4b4b4d;
+}
+
+@media (max-width: 768px) {
+	.landing {
+		flex-direction: column;
+		gap: 3rem;
+	}
+}
+
+.landing .text h2 {
+	font-size: 2rem;
+	margin-bottom: 2rem;
+	color: #4b4b4d;
+}
+
+.landing p {
+	font-size: 1.1rem;
+	color: #4b4b4d;
+	line-height: 1.5;
+	margin-bottom: 1rem;
+}
+
+.landing .text div > p:first-child {
+	font-size: 1.2rem;
+	font-weight: bold;
+}
+
+@media (min-width: 768px) {
+	.landing .text div > p:first-child {
+		font-size: 1.7rem;
+		font-weight: bold;
+	}
+
+	.landing .text div > p:first-child span {
+		display: block;
+	}
+
+	.landing .text h2 {
+		font-size: 2.5rem;
+	}
+
+	.landing .text div > p:last-child {
+		display: none;
+	}
+}
+
+@media (min-width: 768px) {
+	.landing {
+		padding-top: 14rem !important;
+		padding: 8rem;
+	}
+
+	.landing .text {
+		margin-top: 1rem;
+	}
+}
+
+.image {
+	width: 220px;
+	min-width: 220px;
+	height: 170px;
+	margin-bottom: 2rem;
+	padding: 2rem;
+	border: 2px solid #f8fbfe;
+	box-shadow: 1px 1px #00000029;
+	cursor: pointer;
+}
+
+.image img {
+	width: 100%;
+	display: block;
+}
+
+.landing button {
+	height: 3.5em;
+	color: white;
+	font-size: 1rem;
+	cursor: pointer;
+	background: #043340;
+	border: 1px solid #043340;
+	transition: 0.3s;
+	border-radius: 4px;
+	padding: 0.55rem 1rem;
+	display: block;
+	min-width: 164px;
+	font-weight: bold;
+	margin-top: 2.3rem;
+}
+
+.landing button:hover {
+	background: rgba(4, 51, 64, 0.9);
+}
+
+.landing button.hidden {
+	margin-top: 2.4rem;
+	width: 90%;
+	max-width: 320px;
+	display: none;
+}
+
+.landing .svgImage {
+	max-width: 565px;
+	height: 36px;
+	overflow: hidden;
+}
+
+@media (max-width: 768px) {
+	.image {
+		width: 90%;
+		height: 270px;
+		max-width: 320px;
+	}
+
+	.landing .svgImage,
+	.landing .show {
+		display: none;
+	}
+
+	.landing button.hidden {
+		display: block;
+	}
+}
