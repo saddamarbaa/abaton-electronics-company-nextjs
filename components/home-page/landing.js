@@ -5,7 +5,7 @@ import classes from "./landing.module.css";
 
 import { useRouter } from "next/router";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 
 const Landing = () => {
 	const router = useRouter();
@@ -79,4 +79,3 @@ const Landing = () => {
 export default Landing;
 
 
-// https://fontawesome.com/v6.0/icons?q=%20Danger&s=solid%2Cbrands
