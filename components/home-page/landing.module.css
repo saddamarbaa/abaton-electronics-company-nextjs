@@ -1,7 +1,11 @@
 /** @format */
 
-.landing {
+.wrapper {
 	background: #e8e8e8;
+	width: 100%;
+}
+
+.landing {
 	padding-bottom: 5rem;
 	position: relative;
 	padding-top: 5.625rem;
@@ -44,7 +48,8 @@
 
 @media (min-width: 768px) {
 	.landing .text div > p:first-child {
-		font-size: 1.7rem;
+		font-size: 1.5rem;
+		line-height: 0.9;
 		font-weight: bold;
 	}
 
