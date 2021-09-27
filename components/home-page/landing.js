@@ -3,23 +3,37 @@
 import Image from "next/image";
 import classes from "./landing.module.css";
 
+import { useDispatch, useSelector } from "react-redux";
+import { selectLanguage } from "../../features/language/languageSlice";
+
 import { useRouter } from "next/router";
 
 const Landing = () => {
 	const router = useRouter();
+	const dispatch = useDispatch();
+	const englishLanguage = useSelector(selectLanguage);
 
 	const handleClick = () => {
 		router.push("/product");
 	};
+
 	return (
 		<section className={classes.wrapper}>
 			<div className={classes.landing}>
 				<div className={classes.text}>
 					<h2>AGEO 19</h2>
 					<div>
-						<p>
-							People Count and <span>occupancy solutions</span>
-						</p>
+						{englishLanguage && (
+							<p>
+								People Count and <span>occupancy solutions</span>
+							</p>
+						)}
+
+						{!englishLanguage && (
+							<p>
+								Μετρητής Ανθρώπων και <span>λύσεις χωρητικότητας</span>
+							</p>
+						)}
 
 						<p>
 							<Image
@@ -30,14 +44,31 @@ const Landing = () => {
 								height={30}
 								style={{ display: "block", marginRight: "10px" }}
 							/>
-							<span style={{ marginLeft: "7px" }}>
-								Vital during the Covid-19 pandemic
-							</span>
+							{englishLanguage && (
+								<span style={{ marginLeft: "7px" }}>
+									Vital during the Covid-19 pandemic
+								</span>
+							)}
+
+							{!englishLanguage && (
+								<span style={{ marginLeft: "7px" }}>
+									Ζωτικής σημασίας κατά την διάρκεια της πανδημίας
+									Covid-19
+								</span>
+							)}
 						</p>
 					</div>
-					<button className={classes.show} onClick={handleClick}>
-						Check the product
-					</button>
+					{englishLanguage && (
+						<button className={classes.show} onClick={handleClick}>
+							Check the product
+						</button>
+					)}
+
+					{!englishLanguage && (
+						<button className={classes.show} onClick={handleClick}>
+							Δες το προϊόν
+						</button>
+					)}
 				</div>
 				<div>
 					<div
