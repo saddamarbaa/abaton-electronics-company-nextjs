@@ -14,6 +14,7 @@
 	display: flex;
 	justify-content: center;
 	color: #4b4b4d;
+	gap: 4rem;
 }
 
 @media (max-width: 768px) {
@@ -53,10 +54,6 @@
 
 	.landing .text h2 {
 		font-size: 2.5rem;
-	}
-
-	.landing .text div > p:last-child {
-		display: none;
 	}
 }
 
@@ -114,12 +111,6 @@
 	display: none;
 }
 
-.landing .svgImage {
-	max-width: 565px;
-	height: 36px;
-	overflow: hidden;
-}
-
 @media (max-width: 768px) {
 	.image {
 		width: 90%;
@@ -127,7 +118,6 @@
 		max-width: 320px;
 	}
 
-	.landing .svgImage,
 	.landing .show {
 		display: none;
 	}
@@ -135,4 +125,9 @@
 	.landing button.hidden {
 		display: block;
 	}
+}
+
+.landing .text div > p:last-child {
+	display: flex;
+	align-items: center;
 }

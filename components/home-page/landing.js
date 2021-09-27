@@ -15,8 +15,6 @@ const Landing = () => {
 	};
 	return (
 		<section className={classes.landing}>
-			<FontAwesomeIcon icon='check-square' />
-
 			<div className={classes.text}>
 				<h2>AGEO 19</h2>
 				<div>
@@ -24,18 +22,19 @@ const Landing = () => {
 						People Count and <span>occupancy solutions</span>
 					</p>
 
-					<div className={classes["svgImage"]}>
+					<p>
 						<Image
 							alt='svg logo'
-							src='/images/Group 2.svg'
+							src='/images/svsgg.svg'
 							objectFit='contain'
-							width={400}
-							height={46}
-							style={{ display: "block" }}
-							className={classes.svgImage}
+							width={30}
+							height={30}
+							style={{ display: "block", marginRight: "10px" }}
 						/>
-					</div>
-					<p>Vital during the Covid-19 pandemic</p>
+						<span style={{ marginLeft: "7px" }}>
+							Vital during the Covid-19 pandemic
+						</span>
+					</p>
 				</div>
 				<button className={classes.show} onClick={handleClick}>
 					Check the product
@@ -78,3 +77,6 @@ const Landing = () => {
 };
 
 export default Landing;
+
+
+// https://fontawesome.com/v6.0/icons?q=%20Danger&s=solid%2Cbrands
