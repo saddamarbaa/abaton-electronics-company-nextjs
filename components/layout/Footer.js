@@ -117,7 +117,7 @@ const Footer = () => {
 							<span>ΦΑΞ: </span> 2410624625
 						</p>
 						<p>
-							<span>Κινητό: </span> 698325636
+							<span>Κινητό: </span> 6983256536
 						</p>
 						<p>
 							<span>Email: </span>info@abatonelectronic.gr
