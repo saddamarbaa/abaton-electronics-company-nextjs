@@ -103,7 +103,7 @@ const Footer = () => {
 							<span>Email: </span>info@abatonelectronic.gr
 						</p>
 						<p>
-							<span>Address: </span> Cairo 25.41335 Larissa
+							<span>Address: </span> Kairi 25, 41335 Larisa
 						</p>
 					</div>
 				)}
@@ -123,7 +123,7 @@ const Footer = () => {
 							<span>Email: </span>info@abatonelectronic.gr
 						</p>
 						<p>
-							<span>Οδός: </span> Cairo 25.41335 Larissa
+							<span>Οδός: </span> Καΐρη 25, 41335 Λάρισα
 						</p>
 					</div>
 				)}

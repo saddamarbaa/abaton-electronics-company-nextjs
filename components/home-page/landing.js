@@ -99,9 +99,17 @@ const Landing = () => {
 						/>
 					</div>
 
-					<button onClick={handleClick} className={classes.hidden}>
-						Check the product
-					</button>
+					{englishLanguage && (
+						<button onClick={handleClick} className={classes.hidden}>
+							Check the product
+						</button>
+					)}
+
+					{!englishLanguage && (
+						<button onClick={handleClick} className={classes.hidden}>
+							Δες το προϊόν
+						</button>
+					)}
 				</div>
 			</div>
 		</section>
