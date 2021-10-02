@@ -97,7 +97,7 @@ const Footer = () => {
 							<span>fax: </span> 2410624625
 						</p>
 						<p>
-							<span>mobile: </span> 698325636
+							<span>mobile: </span> 6983256536
 						</p>
 						<p>
 							<span>Email: </span>info@abatonelectronic.gr
