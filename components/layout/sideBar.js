@@ -75,12 +75,21 @@ const SideBar = ({ burgerMenuStatus, SetBurgerMenuStatus }) => {
 								</li>
 
 								<li className='select'>
-									<select required onChange={showGreeceLanguage}>
+									<select
+										required
+										onChange={() => {
+											showGreeceLanguage();
+											SetBurgerMenuStatus(false);
+										}}>
 										<option selected disabled>
 											English
 										</option>
 
-										<option onClick={showGreeceLanguage}>
+										<option
+											onClick={() => {
+												showGreeceLanguage();
+												SetBurgerMenuStatus(false);
+											}}>
 											Greek
 										</option>
 									</select>
@@ -118,11 +127,20 @@ const SideBar = ({ burgerMenuStatus, SetBurgerMenuStatus }) => {
 								</li>
 
 								<li className='select'>
-									<select required onChange={showEnglishLanguage}>
+									<select
+										required
+										onChange={() => {
+											showEnglishLanguage();
+											SetBurgerMenuStatus(false);
+										}}>
 										<option selected disabled>
 											Greek
 										</option>
-										<option onClick={showEnglishLanguage}>
+										<option
+											onClick={() => {
+												showEnglishLanguage();
+												SetBurgerMenuStatus(false);
+											}}>
 											English
 										</option>
 									</select>
